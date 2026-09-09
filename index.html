@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,300|Open+Sans:400,400italic,600,600italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta charset="utf-8" />
+    <title>
+      J.C. Francis III - Lead Software Engineer - Full Stack/React/AWS
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      ::-moz-selection {
+        background: #2f96fd;
+        color: #fff;
+      }
+
+      ::selection {
+        background: #2f96fd;
+        color: #fff;
+      }
+
+      body {
+        font-size: 100%;
+        line-height: 1.5em;
+        margin: 0;
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #2f96fd;
+      }
+
+      /* --- Header Classes --- */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: block;
+        color: #fff;
+        background-color: #2f96fd;
+        height: 2em;
+        margin-bottom: 0.5em;
+        padding: 1.2em 0em 0.75em 1.5em;
+      }
+
+      .header__wrap {
+        max-width: 1000px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header__title {
+        font-family:
+          "Oswald", "HelveticaNeue-Condensed", "Helvetica Neue", Arial,
+          sans-serif;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 0;
+        font-weight: 400;
+        line-height: 0.75em;
+      }
+
+      .header__title-text {
+        letter-spacing: 0.06em;
+      }
+
+      .print-btn {
+        margin-right: 1.5em;
+      }
+
+      .print-btn:hover {
+        zoom: 1;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+      }
+
+      .print-btn__text {
+        margin: 0;
+        padding: 0;
+        line-height: 2.2em;
+        color: #ffffff;
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.875em;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      /* --- Layout & Typography Classes --- */
+      .resume-body {
+        text-align: left;
+        max-width: 1000px;
+        margin: 0 1.5em 0;
+      }
+
+      .section-title {
+        display: block;
+        font-family:
+          "Oswald", "HelveticaNeue-Condensed", "Helvetica Neue", Arial,
+          sans-serif;
+        letter-spacing: 0.06em;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0 0 0.75em 0.75em;
+        padding-top: 0.75em;
+        border-bottom: 1px solid #2f96fd;
+      }
+
+      .section-title--first {
+        padding-top: 2.25em;
+      }
+
+      .experience-title {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.875em;
+        letter-spacing: 0.06em;
+        line-height: 1.71428em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0.7em 0.7em 1.71428em 0.8em;
+      }
+
+      .experience-title--italic {
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: normal;
+        font-style: italic;
+      }
+
+      .bullet-text {
+        margin: 0 0 1.5em 0;
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.5em;
+        position: relative;
+        padding-left: 0.75em;
+      }
+
+      .bullet-text--no-margin {
+        margin-bottom: 0.4em;
+      }
+
+      .bullet-text::before {
+        position: absolute;
+        text-align: right;
+        display: block;
+        content: "+";
+        left: 0;
+      }
+
+      .summary-text {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.6em;
+        margin-left: 0.75em;
+        margin-bottom: 1.5em;
+        max-width: 900px;
+      }
+
+      /* --- Contact List Classes --- */
+      .contact-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+      }
+
+      .contact-list__item {
+        text-transform: uppercase;
+        font-family:
+          "Oswald", "HelveticaNeue-Condensed", "Helvetica Neue", Arial,
+          sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1em;
+        margin: 0 1.5em 1.71428em 0;
+      }
+
+      .contact-list__label {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        text-align: left;
+        font-size: 0.813em;
+        color: #000;
+        letter-spacing: 0.06em;
+        line-height: 1.846em;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .contact-list__value {
+        letter-spacing: 0.06em;
+      }
+
+      /* --- Skills Grid Classes --- */
+      .skills-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0 0 1.5em 0;
+        padding: 0 0 0 0.75em;
+      }
+
+      .skills-column {
+        flex: 1;
+        margin-right: 2em;
+      }
+
+      .skills-column:last-child {
+        margin-right: 0;
+      }
+
+      .skills-column__title {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.875em;
+        letter-spacing: 0.06em;
+        line-height: 1.71428em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 0 0.5em 0;
+      }
+
+      .skills-column__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skills-column__item {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.875em;
+        line-height: 1.71428em;
+        font-weight: 400;
+        margin: 0 0 0.25em 0.75em;
+        padding: 0;
+        position: relative;
+      }
+
+      .skills-column__item::before {
+        position: absolute;
+        text-align: right;
+        display: block;
+        margin-top: -0.1em;
+        content: "-";
+        left: -0.75em;
+      }
+
+      /* --- General Layout Classes --- */
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+      }
+
+      .flex-column {
+        flex: 1;
+        max-width: 48%;
+      }
+
+      .clear {
+        clear: both;
+        padding: 0;
+      }
+
+      .full-width {
+        width: 100%;
+      }
+
+      .footer-text {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.875em;
+        line-height: 1.71428em;
+        margin-top: 3.71428em;
+        position: relative;
+        padding-left: 0.75em;
+      }
+
+      /* --- Print Styles --- */
+      @media print {
+        * {
+          background: transparent !important;
+          color: black !important;
+          box-shadow: none !important;
+          text-shadow: none !important;
+          filter: none !important;
+          -ms-filter: none !important;
+        }
+
+        body {
+          font-size: 0.6em;
+        }
+
+        .bullet-text,
+        .skills-column__item,
+        .experience-title,
+        .skills-column__list {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        .header {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .print-btn {
+          display: none;
+        }
+
+        .header__title {
+          padding-left: 0.5em;
+        }
+
+        .experience-title {
+          margin-bottom: 1em;
+        }
+
+        .bullet-text {
+          margin-bottom: 1em;
+        }
+
+        .skills-grid,
+        .flex-container {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .contact-list__item {
+          margin-left: 1em;
+          margin-bottom: 2em;
+        }
+
+        .footer-text {
+          display: none;
+        }
+
+        .section-title--first {
+          padding-top: 0.5em;
+        }
+      }
+    </style>
+    <script type="application/javascript">
+      window.onload = function () {
+        initPrintIcon();
+        initContactObfuscation();
+      };
+
+      function initPrintIcon() {
+        drawPrintIcon();
+        document
+          .getElementById("print-trigger")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            window.print();
+          });
+      }
+
+      function drawPrintIcon() {
+        var canvas = document.getElementById("print-canvas");
+        if (canvas && canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          ctx.fillStyle = "#FFFFFF";
+          ctx.beginPath();
+          ctx.arc(15, 15, 15, 0, Math.PI * 2, true);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.fillStyle = "rgb(47,150,243)";
+          ctx.fillRect(6, 11, 18, 9);
+          ctx.fillRect(10, 7, 10, 3);
+
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fillRect(10, 17, 10, 6);
+          ctx.strokeStyle = "rgb(47,150,243)";
+          ctx.strokeRect(10, 17, 10, 6);
+        }
+      }
+
+      function initContactObfuscation() {
+        // Reconstruct Phone Number
+        var phoneTrigger = document.getElementById("obf-phone");
+        if (phoneTrigger) {
+          var p1 = "214",
+            p2 = "681",
+            p3 = "8888";
+          phoneTrigger.href = "callto://" + "+1" + p1 + p2 + p3;
+          phoneTrigger.querySelector(".contact-list__value").innerHTML =
+            p1 + "&#183;" + p2 + "&#183;" + p3;
+        }
+
+        // Reconstruct Email
+        var emailTrigger = document.getElementById("obf-email");
+        if (emailTrigger) {
+          var u = "jamescecilfrancis",
+            d = "gmail.com";
+          emailTrigger.href = "mailto:" + u + "@" + d;
+          emailTrigger.querySelector(".contact-list__value").innerHTML =
+            u + "@" + d;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <h1 class="header__title">
+          <span class="header__title-text">J.C. Francis III</span>
+        </h1>
+        <a id="print-trigger" href="#" class="print-btn">
+          <canvas id="print-canvas" width="30px" height="30px">
+            <h5 class="print-btn__text">PRINT</h5>
+          </canvas>
+        </a>
+      </div>
+    </header>
+
+    <article class="resume-body">
+      <ul class="contact-list">
+        <li class="contact-list__item">
+          <a id="obf-phone" href="#">
+            <span class="contact-list__value">Loading...</span>
+            <h3 class="contact-list__label">PHONE</h3>
+          </a>
+        </li>
+        <li class="contact-list__item">
+          <a id="obf-email" href="#">
+            <span class="contact-list__value">Loading...</span>
+            <h3 class="contact-list__label">E·MAIL</h3>
+          </a>
+        </li>
+        <li class="contact-list__item">
+          <span class="contact-list__value">Flower Mound, TX</span>
+          <h3 class="contact-list__label">LOCATION</h3>
+        </li>
+      </ul>
+      <div class="clear">
+        <h2 class="section-title section-title--first">Professional Profile</h2>
+        <div class="summary-text">
+          Lead Software Engineer with over a decade of experience enhancing,
+          building, and delivering trusted market-leading technology products in
+          a secure, stable, and scalable way. Backed by strong hands-on
+          expertise in full-stack development (React/AWS/Go/Node) and modern AI
+          integrations, I specialize in driving product design, providing
+          technical guidance to agile teams, and serving as a subject matter
+          expert across the SDLC. I apply deep technical expertise and
+          independent problem-solving to tackle a diverse array of challenges,
+          while adding to a team culture of diversity, inclusion, and respect.
+        </div>
+
+        <h2 class="section-title">Core Competencies & Skills</h2>
+        <ul class="skills-grid">
+          <li class="skills-column">
+            <h4 class="skills-column__title">Engineering & Architecture</h4>
+            <ul class="skills-column__list">
+              <li class="skills-column__item">
+                AI Workflows &amp; Integrations
+              </li>
+              <li class="skills-column__item">React &amp; Angular</li>
+              <li class="skills-column__item">TypeScript &amp; JavaScript</li>
+              <li class="skills-column__item">Go (Golang) &amp; Node.js</li>
+              <li class="skills-column__item">
+                RESTful APIs &amp; Integrations
+              </li>
+            </ul>
+          </li>
+          <li class="skills-column">
+            <h4 class="skills-column__title">DevOps & Cloud Infrastructure</h4>
+            <ul class="skills-column__list">
+              <li class="skills-column__item">Cloud Native (AWS, OpenShift)</li>
+              <li class="skills-column__item">
+                Configuration &amp; Policy-as-code
+              </li>
+              <li class="skills-column__item">CI/CD, Jenkins, Harness</li>
+              <li class="skills-column__item">Ansible, Chef, Docker</li>
+            </ul>
+          </li>
+          <li class="skills-column">
+            <h4 class="skills-column__title">Leadership & Methodologies</h4>
+            <ul class="skills-column__list">
+              <li class="skills-column__item">
+                Technical Guidance & Mentorship
+              </li>
+              <li class="skills-column__item">SDLC Framework Advocacy</li>
+              <li class="skills-column__item">Code Reviews & Debugging</li>
+              <li class="skills-column__item">Agile / Scrum</li>
+              <li class="skills-column__item">
+                Enterprise Compliance &amp; Regulation
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="clear full-width">
+          <h2 class="section-title">Professional Experience</h2>
+
+          <h5 class="experience-title">
+            Citigroup <br />VP - Engineering Lead Manager & Analyst<br />July
+            '23 &ndash; Current
+          </h5>
+          <h5 class="experience-title">
+            Citigroup
+            <span class="experience-title--italic">converted to full-time</span
+            ><br />AVP - Apps Dev Sr. Programmer Analyst<br />June '20 &ndash;
+            July '23
+          </h5>
+          <h5 class="experience-title">
+            Citigroup
+            <span class="experience-title--italic"
+              >contracted through NTT Data</span
+            ><br />Senior UI Developer<br />December '19 &ndash; June '20
+          </h5>
+
+          <p class="bullet-text bullet-text--no-margin">
+            Serve as a function-wide subject matter expert, providing technical
+            guidance and direction to support the business, technical teams,
+            contractors, and vendors across critical enterprise automation
+            infrastructure.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Deliver high-impact technical presentations to enterprise audiences
+            of up to 9,000 stakeholders, influencing peers and project
+            decision-makers to consider the use and application of leading-edge
+            technologies.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Drive decisions that influence product design, application
+            functionality, and technical operations, incorporating AI agent
+            workflows directly into project planning and full-lifecycle
+            full-stack development.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Develop secure and high-quality production code for conversational
+            AI paths and data retrieval models, actively reviewing and debugging
+            code written by others to ensure stability.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Actively contribute to the engineering community as an advocate of
+            firmwide frameworks, tools, and SDLC practices, independently
+            tackling complex design and functionality problems.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Architected highly technical front-end components using core React
+            philosophies and AWS cloud native principles to support an
+            Infrastructure App utilized by 17k community development users.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Engineered an automated OS patching interface supporting 5k monthly
+            active users, managing 100k automated patching workflows and over
+            1.2M secure server executions annually.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Accelerated team onboarding time and productivity by authoring
+            comprehensive documentation, standardizing code structures, and
+            fostering a team culture of diversity, opportunity, inclusion, and
+            respect.
+          </p>
+          <p class="bullet-text">
+            Supervised high-scale database patching schedules to mitigate
+            enterprise risk, coordinating 21k non-production updates while
+            sustaining a 99% on-time patching completion rate.
+          </p>
+
+          <h5 class="experience-title">
+            thyssenkrupp<br />Front-end Developer<br />March '19 &ndash;
+            December '19
+          </h5>
+
+          <p class="bullet-text bullet-text--no-margin">
+            Collaborated with a cross-functional Agile team to engineer the
+            scalable
+            <a href="https://design.na.tkelevator.com/build/product"
+              >Cab Designer application</a
+            >, directly influencing software capabilities based on client needs.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Led the technical implementation of a comprehensive UI redesign,
+            resolving complex rendering issues to deliver a highly refined user
+            experience.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Advised executive management on scalable architecture design and
+            performance optimizations.
+          </p>
+          <p class="bullet-text">
+            Architected and documented robust SCSS standards merging BEM and
+            OOCSS methodologies to streamline future development.
+          </p>
+
+          <h5 class="experience-title">
+            New Legend Media<br />Front-end Developer<br />March '18 &ndash;
+            March '19
+          </h5>
+
+          <p class="bullet-text bullet-text--no-margin">
+            Engineered custom programmatic solutions for high-traffic client
+            sites including
+            <a href="https://wayaround.com">Wayaround.com</a> and
+            <a href="https://bontonfarms.org">BontonFarms.org</a>.
+          </p>
+          <p class="bullet-text">
+            Managed technical releases and Android builds in the Google Play
+            Console for the WayAround Cordova application, acting as the primary
+            debugger for front-end issues and client integration.
+          </p>
+
+          <h5 class="experience-title">
+            AdvoCare International<br />UX Developer<br />August '13 &ndash;
+            March '18
+          </h5>
+
+          <p class="bullet-text bullet-text--no-margin">
+            Led front-end development using modern JS frameworks and advanced
+            lifecycles to rebuild corporate mobile properties, resulting in a
+            110% measurable increase in mobile lead generation.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Developed dynamic, data-driven applications utilizing Vue.js,
+            Firebase, and complex APIs to support national product launches and
+            global distributor networks.
+          </p>
+          <p class="bullet-text bullet-text--no-margin">
+            Analyzed user flow and session data via Google Analytics, explicitly
+            tailoring findings into actionable executive presentations for the
+            VP of Sales and VP of Marketing.
+          </p>
+          <p class="bullet-text">
+            Designed and built a programmatic drag-and-drop presentation tool
+            utilized by internal sales teams and external distributors to curate
+            custom multimedia assets.
+          </p>
+        </div>
+
+        <div class="clear full-width">
+          <h2 class="section-title">Education & Professional Development</h2>
+          <div class="flex-container">
+            <div class="flex-column">
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>University of North Texas</strong><br />Bachelor of
+                Science in Computer Science
+              </p>
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>Citigroup Professional Development</strong><br />People
+                Leadership Program
+              </p>
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>Citigroup Professional Development</strong><br />Centre
+                Stage Presentation Program
+              </p>
+            </div>
+            <div class="flex-column">
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>Red Hat Certified</strong><br />Openshift Administration
+                - Managing Containers & Kubernetes (DO180)
+              </p>
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>ICAgile Certified Professional</strong><br />Foundations
+                of DevOps (ICP-FDO)
+              </p>
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>Scrum Alliance</strong><br />Certified ScrumMaster®
+                (CSM)
+              </p>
+              <p class="bullet-text bullet-text--no-margin">
+                <strong>CompTIA</strong><br />A+ Certified
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear full-width">
+          <h2 class="section-title">Team Oriented Work</h2>
+          <div class="flex-container">
+            <div class="flex-column">
+              <p class="bullet-text bullet-text--no-margin">
+                Empowering my team with the ability to present their work
+                dynamically while aligning technical parameters with core
+                business logic.
+              </p>
+            </div>
+            <div class="flex-column">
+              <p class="bullet-text bullet-text--no-margin">
+                Collaborating closely with database administrators, project
+                managers, and operations infrastructure engineers to secure
+                enterprise controls before code hits production.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+        <p class="footer-text">
+          You can right click and save this page to your computer as "Web Page,
+          HTML Only" or print by clicking the printer icon in the top right.
+          This page uses no external resources other than Google Fonts.
+        </p>
+      </div>
+    </article>
+  </body>
+</html>
