@@ -274,11 +274,6 @@
         max-width: 48%;
       }
 
-      .clear {
-        clear: both;
-        padding: 0;
-      }
-
       .full-width {
         width: 100%;
       }
@@ -433,7 +428,7 @@
       </div>
     </header>
 
-    <article class="resume-body">
+    <main class="resume-body">
       <ul class="contact-list">
         <li class="contact-list__item">
           <a id="obf-phone" href="#">
@@ -452,21 +447,21 @@
           <h3 class="contact-list__label">LOCATION</h3>
         </li>
       </ul>
-      <div class="clear">
+      <div>
         <h2 class="section-title section-title--first">Professional Profile</h2>
-        <div class="summary-text">
+        <p class="summary-text">
           Lead Software Engineer with over a decade of experience enhancing,
           building, and delivering trusted market-leading technology products.
           Backed by strong hands-on expertise in full-stack development
           (React/Openshift/Go/Node) and modern AI integrations, I specialize in
           driving product design, providing technical guidance to agile teams,
           and serving as a subject matter expert.
-        </div>
+        </p>
 
         <h2 class="section-title">Core Competencies & Skills</h2>
         <ul class="skills-grid">
           <li class="skills-column">
-            <h4 class="skills-column__title">Engineering & Architecture</h4>
+            <h3 class="skills-column__title">Engineering & Architecture</h3>
             <ul class="skills-column__list">
               <li class="skills-column__item">
                 AI Workflows &amp; Integrations
@@ -480,7 +475,7 @@
             </ul>
           </li>
           <li class="skills-column">
-            <h4 class="skills-column__title">DevOps & Cloud Infrastructure</h4>
+            <h3 class="skills-column__title">DevOps & Cloud Infrastructure</h3>
             <ul class="skills-column__list">
               <li class="skills-column__item">Cloud Native (OpenShift)</li>
               <li class="skills-column__item">
@@ -491,8 +486,11 @@
             </ul>
           </li>
           <li class="skills-column">
-            <h4 class="skills-column__title">Leadership & Methodologies</h4>
+            <h3 class="skills-column__title">Leadership & Methodologies</h3>
             <ul class="skills-column__list">
+              <li class="skills-column__item">
+                Engineering Management (6 Direct Reports)
+              </li>
               <li class="skills-column__item">
                 Technical Guidance & Mentorship
               </li>
@@ -506,31 +504,30 @@
           </li>
         </ul>
 
-        <div class="clear full-width">
+        <section class="full-width">
           <h2 class="section-title">Professional Experience</h2>
 
-          <h5 class="experience-title">
+          <h3 class="experience-title">
             Citigroup <br />VP - Engineering Lead Manager & Analyst<br />July
             '23 &ndash; Current
-          </h5>
-          <h5 class="experience-title">
+          </h3>
+          <h3 class="experience-title">
             Citigroup
             <span class="experience-title--italic">converted to full-time</span
             ><br />AVP - Apps Dev Sr. Programmer Analyst<br />June '20 &ndash;
             July '23
-          </h5>
-          <h5 class="experience-title">
+          </h3>
+          <h3 class="experience-title">
             Citigroup
             <span class="experience-title--italic"
               >contracted through NTT Data</span
             ><br />Senior UI Developer<br />December '19 &ndash; June '20
-          </h5>
+          </h3>
 
           <p class="bullet-text bullet-text--no-margin">
-            Serve as a function-wide subject matter expert, providing technical
-            guidance and direction to support the business, technical teams,
-            contractors, and vendors across critical enterprise automation
-            infrastructure.
+            Serve as a subject matter expert, managing a global team of 6
+            developers and providing guidance to support the business across
+            critical enterprise automation infrastructure.
           </p>
           <p class="bullet-text bullet-text--no-margin">
             Deliver high-impact technical presentations to enterprise audiences
@@ -572,10 +569,10 @@
             mitigate enterprise risk.
           </p>
 
-          <h5 class="experience-title">
+          <h3 class="experience-title">
             thyssenkrupp<br />Front-end Developer<br />March '19 &ndash;
             December '19
-          </h5>
+          </h3>
 
           <p class="bullet-text bullet-text--no-margin">
             Collaborated with a cross-functional Agile team to engineer the
@@ -598,10 +595,10 @@
             OOCSS methodologies to streamline future development.
           </p>
 
-          <h5 class="experience-title">
+          <h3 class="experience-title">
             New Legend Media<br />Front-end Developer<br />March '18 &ndash;
             March '19
-          </h5>
+          </h3>
 
           <p class="bullet-text bullet-text--no-margin">
             Engineered custom programmatic solutions for high-traffic client
@@ -615,10 +612,10 @@
             debugger for front-end issues and client integration.
           </p>
 
-          <h5 class="experience-title">
+          <h3 class="experience-title">
             AdvoCare International<br />UX Developer<br />August '13 &ndash;
             March '18
-          </h5>
+          </h3>
 
           <p class="bullet-text bullet-text--no-margin">
             Led front-end development using modern JS frameworks and advanced
@@ -640,9 +637,9 @@
             utilized by internal sales teams and external distributors to curate
             custom multimedia assets.
           </p>
-        </div>
+        </section>
 
-        <div class="clear full-width">
+        <section class="full-width">
           <h2 class="section-title">Education & Professional Development</h2>
           <div class="flex-container">
             <div class="flex-column">
@@ -677,9 +674,9 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="clear full-width">
+        <section class="full-width">
           <h2 class="section-title">Team Oriented Work</h2>
           <div class="flex-container">
             <div class="flex-column">
@@ -697,15 +694,14 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="clear"></div>
-        <p class="footer-text">
+        <footer class="footer-text">
           You can right click and save this page to your computer as "Web Page,
           HTML Only" or print by clicking the printer icon in the top right.
           This page uses no external resources other than Google Fonts.
-        </p>
+        </footer>
       </div>
-    </article>
+    </main>
   </body>
 </html>
